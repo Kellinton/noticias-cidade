@@ -1,9 +1,6 @@
 :root {
-    --darkblue: #161925;
-    --lightblue: #446688;
-    --white: #fffcf9;
-    --green: #31af8b;
-    --orange: #ff850a;
+    --bg1: #b10333;
+    --ativo: #de003e;
   }
 *, *::before, *::after{
     margin: 0;
@@ -16,23 +13,72 @@ html{
 
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 300px 3fr 1fr;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
     grid-template-rows: 233px 1fr 133px;
     width: 100%;
     min-height: 100vh;
 }
-
-.grid-container  *{
-    min-height: 100px;
-    text-align: center;
-    font-weight: 800;
-}
-
 header{
+    display: flex;
+    justify-content: center;
     grid-column: 1 / -1;
     grid-row: 1;
     background-image: url(../img/fundo.png);
 }
+header .grid-container-header{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 66.7%;
+    height: 179px;
+}
+header .grid-container-header .logo{
+    background-image: url(../img/logo.png);
+    width: 152px;
+    height: 66px;
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+    flex-grow: 1;
+    margin-top: 2%;
+}
+
+header .grid-container-header .mapa-brasil{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+header .grid-container-header nav{
+    z-index: 1;
+}
+header .grid-container-header nav ul{
+    display: flex;
+}
+
+header .grid-container-header nav ul li a{
+    background-color: #b10333;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    line-height: 2.1rem;
+    color: #fff;
+    background-image: url(../img/divisor.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: left;
+    display: block;
+}
+header .grid-container-header nav ul li a:hover{
+    color: #69001d;
+}
+header .grid-container-header nav ul li .ativo{
+    color: #fff;
+    background-color: var(--ativo);
+}
+
+header .grid-container-header nav ul li:nth-child(1) a{
+    background-image: none;
+}
+
 
 aside{
    grid-column: 2 / 3;
