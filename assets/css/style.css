@@ -171,10 +171,86 @@ aside .newsletter-container .newsletter-form form input[type="button"]:hover{
 main {
   grid-column: 3 / 4;
   grid-auto-rows: 1;
-  background-color: orange;
+}
+main .grid-container-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+main .grid-container-main section{
+    background-image: url("../img/fundo-caixa.png");
+    padding: .5rem;
+    min-height: 500px;
+}
+main .grid-container-main section h2{
+    color: #fff;
+    font-weight: bolder;
+    padding: 0.5rem;
+    background-color: #294c71;
+    margin-bottom: 0.5rem;
+}
+main .grid-container-main section article{
+    background-color: #fff;
+    padding: .5rem;
+}
+main .grid-container-main section article div{
+    position: relative;
+    border: 3px solid #dfdfdf;
+    margin-bottom: 1rem;
+}
+main .grid-container-main section article span{
+    position: absolute;
+    background-color: var(--ativo);
+    color: #fff;
+    padding: .5rem;
+}
+main .grid-container-main section article img{
+    width: 100%;
+}
+main .grid-container-main section article p{
+    line-height: 20px;
+    margin-bottom: .5rem;
+}
+main .grid-container-main section article a{
+    color: var(--bg1);
+}
+main .grid-container-main .noticia-container{
+    display: flex;
+}
+main .grid-container-main .noticia-container{
+    display: flex;
+}
+main .grid-container-main .noticia-container{
+  text-decoration: none;
+  margin-bottom: .5rem;
+}
+main .grid-container-main .noticia-container div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    height: 100px;
+    margin-bottom: 0rem;
+}
+main .grid-container-main .noticia-container h3{
+    color: var(--ativo);
+    flex-grow: 1;
+
+}
+main .grid-container-main .noticia-container p{
+    color: #000;
 }
 footer {
   grid-column: 1 / -1;
   grid-row: 3;
-  background-color: pink;
+  background-color: #294c71;
+}
+footer .grid-container-footer{
+    color: #fff;
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
